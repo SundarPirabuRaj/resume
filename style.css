@@ -393,66 +393,6 @@ body.dark .footer {
   color: #8b949e;
 }
 
-/* ===================== DARK MODE TOGGLE ===================== */
-
-
-.theme-switch {
-  position: relative; 
-  margin-left: 16px;
-}
-
-/* .theme-switch {
-  position: fixed;
-  top: 18px;
-  right: 18px;
-  z-index: 1000;
-} */
-
-/* Hide checkbox */
-.theme-switch input {
-  display: none;
-}
-
-/* Switch body */
-.theme-switch label {
-  width: 52px;
-  height: 28px;
-  background: #d1d5db;
-  border-radius: 50px;
-  position: relative;
-  cursor: pointer;
-  display: block;
-  transition: background 0.3s ease;
-}
-
-/* Switch knob */
-.theme-switch label::after {
-  content: "";
-  width: 22px;
-  height: 22px;
-  background: #ffffff;
-  border-radius: 50%;
-  position: absolute;
-  top: 3px;
-  left: 4px;
-  transition: transform 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
-}
-
-/* Checked (Dark mode ON) */
-.theme-switch input:checked + label {
-  background: #58a6ff;
-}
-
-.theme-switch input:checked + label::after {
-  transform: translateX(24px);
-}
-
-/* Dark mode container awareness */
-body.dark .theme-switch label {
-  background: #30363d;
-}
-
 /* ===================== HERO HEADER LAYOUT ===================== */
 
 .hero-header {
@@ -472,51 +412,6 @@ body.dark .theme-switch label {
   /* 🔥 THIS IS THE FIX */
   max-width: 100%;
   width: 100%;
-}
-
-
-/* ===================== THEME SWITCH (ICON BASED) ===================== */
-.theme-switch input {
-  display: none;
-}
-
-.theme-switch label {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 64px;
-  height: 32px;
-  background: #f1f3f5;      /* soft neutral */
-  border-radius: 999px;
-  cursor: pointer;
-  padding: 4px;
-  border: 1px solid #d0d7de;
-}
-
-.theme-switch .icon {
-  width: 50%;
-  text-align: center;
-  font-size: 0.85rem;
-  z-index: 1;          /* icons stay visible */
-  opacity: 0.6;
-}
-
-.theme-switch .slider {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  background: #ffffff;
-  border-radius: 50%;
-  top: 4px;
-  left: 4px;
-  z-index: 2;          /* slider above bg, below icons visually */
-  transition: transform 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
-
-/* Dark mode position */
-.theme-switch input:checked + label .slider {
-  transform: translateX(30px);
 }
 
 /* ===================== DARK MODE COLORS ===================== */
@@ -545,32 +440,6 @@ body.dark .theme-switch label {
   opacity: 1;
 }
 
-/* ===================== THEME SWITCH – LIGHT BLUE FIX ===================== */
-
-.theme-switch label {
-  background: #e8f2ff;              /* light blue background */
-  border: 1px solid #c7ddff;
-}
-
-.theme-switch .slider {
-  background: #ffffff;              /* white knob */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.18);
-}
-
-/* Icons */
-.theme-switch .icon {
-  color: #0366d6;                   /* GitHub blue */
-  opacity: 0.85;
-}
-
-/* Active icon emphasis */
-.theme-switch input:not(:checked) + label .sun {
-  opacity: 1;
-}
-
-.theme-switch input:checked + label .moon {
-  opacity: 1;
-}
 
 /* ===================== DARK MODE OVERRIDE ===================== */
 
@@ -587,23 +456,159 @@ body.dark .theme-switch .icon {
   color: #e6edf3;
 }
 
-/* ===================== FINAL LIGHT MODE TOGGLE FIX ===================== */
 
-/* Force LIGHT MODE toggle background */
-body:not(.dark) .theme-switch label {
-  /* background-color: #e3f0ff !important;   /* clearly light blue */
-  /* border-color: #b6d4ff; */ 
-  background-color: #1f6feb;  /* clearly light blue */
-  border-color: #1f6feb; 
+/* ===================== THEME TOGGLE (FINAL, PROD SAFE) ===================== */
+
+.theme-switch {
+  position: relative;
+  margin-left: 16px;
 }
 
-/* Slider knob */
-body:not(.dark) .theme-switch .slider {
-  background-color: #ffffff;
+.theme-switch input {
+  display: none;
+}
+
+.theme-switch label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 64px;
+  height: 32px;
+
+  background: #e3f0ff;          /* LIGHT BLUE */
+  border: 1px solid #b6d4ff;
+  border-radius: 999px;
+
+  padding: 4px;
+  cursor: pointer;
 }
 
 /* Icons */
-body:not(.dark) .theme-switch .icon {
+.theme-switch .icon {
+  width: 50%;
+  text-align: center;
+  font-size: 0.85rem;
+  z-index: 1;
   color: #0366d6;
-  opacity: 0.9;
+  opacity: 0.8;
+}
+
+/* Slider */
+.theme-switch .slider {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: #ffffff;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+  z-index: 2;
+}
+
+/* Checked */
+.theme-switch input:checked + label .slider {
+  transform: translateX(30px);
+}
+
+/* Active icon */
+.theme-switch input:not(:checked) + label .sun {
+  opacity: 1;
+}
+
+.theme-switch input:checked + label .moon {
+  opacity: 1;
+}
+
+/* ===================== DARK MODE ===================== */
+
+body.dark .theme-switch label {
+  background: #1f6feb;
+  border-color: #1f6feb;
+}
+
+body.dark .theme-switch .slider {
+  background: #0d1117;
+}
+
+body.dark .theme-switch .icon {
+  color: #e6edf3;
+}
+
+/* ===================== THEME TOGGLE (FINAL & CLEAN) ===================== */
+
+.theme-switch {
+  position: relative;
+  margin-left: 16px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.theme-switch label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 64px;
+  height: 32px;
+  padding: 4px;
+
+  background: #1f6feb; 
+  border: 1px solid #1f6feb;
+  border-radius: 999px;
+
+  cursor: pointer;
+}
+
+.theme-switch .icon {
+  width: 50%;
+  text-align: center;
+  font-size: 0.85rem;
+  z-index: 1;
+  color: #0366d6;
+  opacity: 0.8;
+}
+
+.theme-switch .slider {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 24px;
+  height: 24px;
+
+  background: #ffffff;
+  border-radius: 50%;
+  z-index: 2;
+
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+}
+
+.theme-switch input:checked + label .slider {
+  transform: translateX(30px);
+}
+
+.theme-switch input:not(:checked) + label .sun {
+  opacity: 1;
+}
+
+.theme-switch input:checked + label .moon {
+  opacity: 1;
+}
+
+/* ===== Dark Mode ===== */
+
+body.dark .theme-switch label {
+  background: #1f6feb;
+  border-color: #1f6feb;
+}
+
+body.dark .theme-switch .slider {
+  background: #0d1117;
+}
+
+body.dark .theme-switch .icon {
+  color: #e6edf3;
 }
