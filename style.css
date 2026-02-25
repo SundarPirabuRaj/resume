@@ -1,103 +1,208 @@
+/* ===================== RESET ===================== */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
+/* ===================== BASE ===================== */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  background: #ffffff;
+  background: #f6f8fa;
   color: #222;
   line-height: 1.6;
 }
 
 .container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-.header {
-  margin-bottom: 40px;
+/* ===================== HERO ===================== */
+.hero {
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 30px;
+  margin-bottom: 50px;
 }
 
-.header h1 {
-  font-size: 2.6rem;
-  font-weight: 700;
+.hero h1 {
+  font-size: 2.8rem;
 }
 
-.title {
-  font-size: 1.2rem;
+.subtitle {
+  font-size: 1.3rem;
   color: #444;
 }
 
-.location {
-  color: #666;
-  margin-bottom: 15px;
+.intro {
+  margin-top: 15px;
+  max-width: 750px;
 }
 
-.links a {
-  margin-right: 15px;
+.actions {
+  margin-top: 25px;
+}
+
+.btn {
+  margin-right: 14px;
   text-decoration: none;
   color: #0366d6;
   font-weight: 500;
 }
 
-.resume-btn {
+.primary {
   border: 1px solid #0366d6;
-  padding: 6px 12px;
-  border-radius: 4px;
+  padding: 8px 14px;
+  border-radius: 6px;
 }
 
-section {
-  margin-bottom: 35px;
+/* ===================== ACCORDION ===================== */
+.accordion-item {
+  border-top: 1px solid #eaecef;
 }
 
-section h2 {
-  font-size: 1.4rem;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 6px;
+.accordion-header {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 18px 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-.skills li {
-  list-style: none;
+.accordion-content {
+  display: none;
+  padding-bottom: 30px;
+}
+
+/* ===================== GRID ===================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* ===================== BASE CARD ===================== */
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 22px;
+
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.08);
+  border-color: #d0d7de;
+}
+
+.card h3 {
   margin-bottom: 6px;
 }
 
-.job, .project {
-  margin-bottom: 20px;
+/* ===================== EXPERIENCE ===================== */
+.role {
+  font-weight: 500;
+  margin-top: 4px;
+  color: #444;
 }
 
-.job h3, .project h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
+.time {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: #6b7280;
 }
 
-.duration {
-  font-size: 0.9rem;
-  color: #666;
+.toggle-btn {
+  margin-top: 12px;
+  background: none;
+  border: none;
+  color: #0366d6;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0;
 }
 
-ul {
-  margin-left: 20px;
+.toggle-btn:hover {
+  text-decoration: underline;
 }
 
-ul li {
+.details {
+  display: none;
+  margin-top: 12px;
+}
+
+.details ul {
+  margin-left: 18px;
+}
+
+.card ul {
+  margin-top: 10px;
+  margin-left: 18px;
+}
+
+.card li {
   margin-bottom: 8px;
 }
 
-.project a {
-  display: inline-block;
-  margin-top: 6px;
-  color: #0366d6;
-  text-decoration: none;
-  font-weight: 500;
+/* ===================== SKILLS (MATCHES EXPERIENCE) ===================== */
+.skill-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-left: 4px solid #0366d6;
 }
 
+.skill-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tags span {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* ===================== ACHIEVEMENTS ===================== */
+.highlight {
+  border-left: 4px solid #0366d6;
+  background: linear-gradient(
+    to right,
+    rgba(3,102,214,0.03),
+    transparent
+  );
+}
+
+/* ===================== FOOTER ===================== */
 .footer {
+  margin-top: 60px;
   text-align: center;
   font-size: 0.85rem;
   color: #777;
-  margin-top: 40px;
 }

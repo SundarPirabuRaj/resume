@@ -1,159 +1,229 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sundar Pirabu Raj | Backend Engineer</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-  <main class="container">
+<main class="container">
 
-    <!-- HEADER -->
-    <header class="header">
-      <h1>Sundar Pirabu Raj</h1>
-      <p class="title">Backend Engineer (SDE-2)</p>
-      <p class="location">Chennai, India</p>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Sundar Pirabu Raj</h1>
+    <p class="subtitle">Backend Engineer • Event-Driven Systems • Java</p>
 
-      <div class="links">
-        <a href="mailto:sundargopal97@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/sundar-pirabu-raj-787103149" target="_blank">LinkedIn</a>
-        <a href="https://github.com/tyrantsundar" target="_blank">GitHub</a>
-        <a href="https://leetcode.com/u/sundar_mr_ko/" target="_blank">LeetCode</a>
-        <a href="SundarPirabuRajR_SDE2.pdf" target="_blank" class="resume-btn">Download Resume</a>
-      </div>
-    </header>
+    <p class="intro">
+      Backend Engineer with <strong>5.5+ years of experience</strong> building
+      scalable, production-grade backend systems.
+      Strong focus on <strong>event-driven architecture, performance, and system design</strong>.
+    </p>
 
-    <!-- ABOUT -->
-    <section>
-      <h2>About</h2>
-      <p>
-        Backend Engineer with <strong>5.5 years of experience</strong> building scalable,
-        high-performance backend systems using <strong>Java and Spring Boot</strong>.
-        Strong expertise in <strong>event-driven architecture, system design, and performance optimization</strong>.
-        Focused on building production-grade systems rather than CRUD applications.
-      </p>
-    </section>
+    <div class="actions">
+      <a href="SundarPirabuRajR_SDE2.pdf" target="_blank" class="btn primary">Download Resume</a>
+      <a href="https://github.com/tyrantsundar" target="_blank" class="btn">GitHub</a>
+      <a href="https://www.linkedin.com/in/sundar-pirabu-raj-787103149" target="_blank" class="btn">LinkedIn</a>
+      <a href="https://leetcode.com/u/sundar_mr_ko/" target="_blank" class="btn">LeetCode</a>
+    </div>
+  </section>
 
-    <!-- SKILLS -->
-    <section>
-      <h2>Skills</h2>
-      <ul class="skills">
-        <li>Java, SQL</li>
-        <li>Spring Boot, Spring MVC, Spring Data JPA, Hibernate</li>
-        <li>Kafka, MongoDB, MySQL, Redis, Elasticsearch</li>
-        <li>Docker, Git, Maven, Postman</li>
-        <li>Microservices, Event-Driven Architecture, System Design</li>
-        <li>Data Structures & Algorithms, REST APIs, JWT</li>
-      </ul>
-    </section>
+  <!-- ACCORDION -->
+  <section class="accordion">
 
     <!-- EXPERIENCE -->
-    <section>
-      <h2>Experience</h2>
+    
+    <!-- EXPERIENCE -->
+    <div class="accordion-item">
+      <button class="accordion-header">💼 Experience</button>
 
-      <div class="job">
-        <h3>Backend Engineer – Star Health & Allied Insurance</h3>
-        <span class="duration">Dec 2024 – Present</span>
+      <div class="accordion-content grid">
 
-        <ul>
-          <li>
-            Built a centralized communication platform using Spring Boot, Kafka, MongoDB, and Drools,
-            handling <strong>1M+ multi-channel notifications/month</strong>.
-          </li>
-          <li>
-            Designed a configuration-driven channel selection system, reducing delivery time by <strong>30%</strong>
-            while ensuring user privacy.
-          </li>
-          <li>
-            Migrated monolithic workflows to event-driven architecture, improving processing efficiency by <strong>50%</strong>.
-          </li>
-          <li>
-            Implemented retry and failure handling mechanisms achieving <strong>99.9% message delivery reliability</strong>.
-          </li>
-        </ul>
+        <!-- STAR HEALTH -->
+        <div class="card">
+          <h3>Star Health & Allied Insurance</h3>
+          <p class="role">Backend Engineer</p>
+          <span class="time">Dec 2024 – Present</span>
+
+          <button class="toggle-btn">View Responsibilities ▾</button>
+
+          <div class="details">
+            <ul>
+              <li>Built centralized communication platform handling <strong>1M+ notifications/month</strong></li>
+              <li>Reduced delivery latency by <strong>30%</strong> using config-driven channel selection</li>
+              <li>Migrated monolith workflows to event-driven architecture improving efficiency by <strong>50%</strong></li>
+              <li>Implemented retries achieving <strong>99.9% delivery reliability</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- MTAP -->
+        <div class="card">
+          <h3>MTAP Technology</h3>
+          <p class="role">Backend Engineer</p>
+          <span class="time">Dec 2022 – Nov 2024</span>
+
+          <button class="toggle-btn">View Responsibilities ▾</button>
+
+          <div class="details">
+            <ul>
+              <li>Built features for Employee Transport System</li>
+              <li>Improved responsiveness by <strong>35%</strong> via caching & query tuning</li>
+              <li>Improved user satisfaction by <strong>20%</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ZOHO -->
+        <div class="card">
+          <h3>Zoho Corporation</h3>
+          <p class="role">Backend Engineer</p>
+          <span class="time">Dec 2021 – Sep 2022</span>
+
+          <button class="toggle-btn">View Responsibilities ▾</button>
+
+          <div class="details">
+            <ul>
+              <li>Optimized Zoho Sheets formula engines</li>
+              <li>Achieved up to <strong>16× performance improvement</strong></li>
+              <li>Identified bottlenecks using VisualVM</li>
+            </ul>
+          </div>
+        </div>
+
       </div>
+    </div>
 
-      <div class="job">
-        <h3>Backend Engineer – MTAP Technology</h3>
-        <span class="duration">Dec 2022 – Nov 2024</span>
+        <!-- SKILLS -->
+    <div class="accordion-item">
+    <button class="accordion-header">🛠 Skills</button>
 
-        <ul>
-          <li>
-            Delivered features for an Employee Transport System, increasing user satisfaction by <strong>20%</strong>.
-          </li>
-          <li>
-            Improved system responsiveness by <strong>35%</strong> using caching and optimized database queries.
-          </li>
-          <li>
-            Built RESTful APIs and performed code reviews to maintain code quality.
-          </li>
-        </ul>
-      </div>
+    <div class="accordion-content grid">
 
-      <div class="job">
-        <h3>Backend Engineer – Zoho Corporation</h3>
-        <span class="duration">Dec 2021 – Sep 2022</span>
+        <div class="card skill-card">
+        <h3>Backend Core</h3>
+        <div class="skill-tags">
+            <span>Java</span>
+            <span>Spring Boot</span>
+            <span>Microservices</span>
+            <span>REST APIs</span>
+        </div>
+        </div>
 
-        <ul>
-          <li>
-            Optimized core formula engines in Zoho Sheets (SumIf, CountIf, AverageIf, etc.).
-          </li>
-          <li>
-            Achieved up to <strong>16x performance improvement</strong> through algorithmic optimization.
-          </li>
-          <li>
-            Identified and resolved performance bottlenecks using VisualVM and logs.
-          </li>
-        </ul>
-      </div>
-    </section>
+        <div class="card skill-card">
+        <h3>Messaging & Async</h3>
+        <div class="skill-tags">
+            <span>Kafka</span>
+            <span>Event-Driven Architecture</span>
+            <span>Retries</span>
+            <span>Idempotency</span>
+        </div>
+        </div>
 
-    <!-- PROJECTS -->
-    <section>
-      <h2>Projects</h2>
+        <div class="card skill-card">
+        <h3>Databases & Cache</h3>
+        <div class="skill-tags">
+            <span>MySQL</span>
+            <span>MongoDB</span>
+            <span>Redis</span>
+        </div>
+        </div>
 
-      <div class="project">
-        <h3>vNatives – Event-Driven E-Commerce Platform</h3>
-        <p>
-          Built a distributed, event-driven commerce platform using Spring Boot, Kafka, MongoDB,
-          MySQL, Redis, Docker, and Elasticsearch.
-        </p>
-        <p>
-          Focused on real-world backend patterns such as asynchronous communication,
-          data ownership, retries, idempotency, and scalability.
-        </p>
-        <a href="https://github.com/vnatives/vnatives-platform" target="_blank">View on GitHub →</a>
-      </div>
-    </section>
+        <div class="card skill-card">
+        <h3>DevOps & Tools</h3>
+        <div class="skill-tags">
+            <span>Docker</span>
+            <span>Git</span>
+            <span>Maven</span>
+            <span>Postman</span>
+        </div>
+        </div>
+
+        <div class="card skill-card">
+        <h3>Design & CS</h3>
+        <div class="skill-tags">
+            <span>System Design</span>
+            <span>Low-Level Design</span>
+            <span>Concurrency</span>
+            <span>SQL Optimization</span>
+        </div>
+        </div>
+
+    </div>
+    </div>
 
     <!-- ACHIEVEMENTS -->
-    <section>
-      <h2>Achievements</h2>
-      <ul>
-        <li>Employee of the Month – MTAP (May 2023)</li>
-        <li>Star Performer Award – MTAP (Nov 2023)</li>
-        <li>Solved 500+ DSA problems on LeetCode</li>
-        <li>Solved 50+ SQL problems on LeetCode</li>
-      </ul>
-    </section>
+    <div class="accordion-item">
+      <button class="accordion-header">🏆 Achievements</button>
+      <div class="accordion-content grid">
+
+        <div class="card highlight">
+          <h3>Employee of the Month</h3>
+          <p>MTAP Technology • May 2023</p>
+        </div>
+
+        <div class="card highlight">
+          <h3>Star Performer Award</h3>
+          <p>MTAP Technology • Nov 2023</p>
+        </div>
+
+        <div class="card highlight">
+          <h3>500+ DSA Problems</h3>
+          <p>Solved on LeetCode</p>
+        </div>
+
+        <div class="card highlight">
+          <h3>50+ SQL Problems</h3>
+          <p>Solved on LeetCode</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="accordion-item">
+      <button class="accordion-header">🚀 Projects</button>
+      <div class="accordion-content grid">
+
+        <div class="card">
+          <h3>VNatives – Event-Driven E-Commerce Platform</h3>
+          <p>
+            Production-grade personal project focused on real-world backend patterns:
+            Kafka-based async communication, retries, idempotency, and scalability.
+          </p>
+          <a href="https://github.com/vnatives/vnatives-platform" target="_blank">
+            View on GitHub →
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+
 
     <!-- EDUCATION -->
-    <section>
-      <h2>Education</h2>
-      <p>
-        <strong>B.Tech – First Class (Fast Track)</strong><br/>
-        Alagappa Chettiar Government College of Engineering and Technology (2019)
-      </p>
-    </section>
+    <div class="accordion-item">
+      <button class="accordion-header">🎓 Education</button>
+      <div class="accordion-content grid">
 
-    <footer class="footer">
-      <p>© 2026 Sundar Pirabu Raj</p>
-    </footer>
+        <div class="card">
+          <h3>B.Tech – First Class (Fast Track)</h3>
+          <p>Alagappa Chettiar Government College of Engineering and Technology</p>
+          <span class="time">2019</span>
+        </div>
 
-  </main>
+      </div>
+    </div>
 
+  </section>
+
+  <footer class="footer">
+    © 2026 Sundar Pirabu Raj • Chennai, India
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
