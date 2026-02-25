@@ -206,3 +206,75 @@ body {
   font-size: 0.85rem;
   color: #777;
 }
+
+/* ===================== MOBILE RESPONSIVE ===================== */
+@media (max-width: 768px) {
+
+  /* Container */
+  .container {
+    margin: 20px 12px;
+    padding: 24px;
+    border-radius: 10px;
+  }
+
+  /* Hero */
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.05rem;
+  }
+
+  .intro {
+    font-size: 0.95rem;
+  }
+
+  /* Action buttons stack */
+  .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn {
+    margin-right: 0;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 6px;
+  }
+
+  /* Accordion headers */
+  .accordion-header {
+    font-size: 1.15rem;
+    padding: 14px 0;
+  }
+
+  /* Cards */
+  .card {
+    padding: 18px;
+  }
+
+  .card:hover {
+    transform: none; /* no hover lift on mobile */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  }
+
+  /* Grid */
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Skill tags */
+  .skill-tags span {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 40px;
+    font-size: 0.75rem;
+  }
+}
