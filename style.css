@@ -278,3 +278,332 @@ body {
     font-size: 0.75rem;
   }
 }
+/* ===================== DARK MODE ===================== */
+body.dark {
+  background: #0d1117;
+  color: #c9d1d9;
+}
+
+body.dark .container {
+  background: #161b22;
+  box-shadow: none;
+}
+
+body.dark .hero {
+  border-bottom-color: #30363d;
+}
+
+body.dark .subtitle {
+  color: #9da7b3;
+}
+
+body.dark .accordion-item {
+  border-top-color: #30363d;
+}
+
+/* 🔥 Cards in Dark Mode */
+body.dark .card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+body.dark .card:hover {
+  transform: translateY(-2px);
+  border-color: #58a6ff;
+  box-shadow: 0 6px 18px rgba(88,166,255,0.12);
+}
+
+/* 🔥 Highlight cards (Achievements / Important sections) */
+body.dark .highlight {
+  border-left: 4px solid #58a6ff;
+  background: linear-gradient(
+    to right,
+    rgba(88,166,255,0.08),
+    transparent
+  );
+}
+
+/* 🔥 Skill tags */
+body.dark .skill-tags span {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  color: #c9d1d9;
+}
+
+body.dark .skill-tags span:hover {
+  border-color: #58a6ff;
+}
+
+/* Buttons */
+body.dark .btn {
+  color: #58a6ff;
+}
+
+body.dark .primary {
+  border-color: #58a6ff;
+}
+
+/* ===================== DARK MODE TEXT FIX ===================== */
+
+/* Headings */
+body.dark h1,
+body.dark h2,
+body.dark h3 {
+  color: #e6edf3;
+}
+
+/* Role & metadata */
+body.dark .role {
+  color: #c9d1d9;
+}
+
+body.dark .time {
+  color: #8b949e;
+}
+
+/* Paragraph text inside cards */
+body.dark .card p,
+body.dark .card li {
+  color: #c9d1d9;
+}
+
+/* Accordion headers */
+body.dark .accordion-header {
+  color: #e6edf3;
+}
+
+/* Skill section headings */
+body.dark .skill-card h3 {
+  color: #e6edf3;
+  border-bottom-color: #30363d;
+}
+
+/* Toggle buttons */
+body.dark .toggle-btn {
+  color: #58a6ff;
+}
+
+/* Footer */
+body.dark .footer {
+  color: #8b949e;
+}
+
+/* ===================== DARK MODE TOGGLE ===================== */
+
+
+.theme-switch {
+  position: relative; 
+  margin-left: 16px;
+}
+
+/* .theme-switch {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 1000;
+} */
+
+/* Hide checkbox */
+.theme-switch input {
+  display: none;
+}
+
+/* Switch body */
+.theme-switch label {
+  width: 52px;
+  height: 28px;
+  background: #d1d5db;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  display: block;
+  transition: background 0.3s ease;
+}
+
+/* Switch knob */
+.theme-switch label::after {
+  content: "";
+  width: 22px;
+  height: 22px;
+  background: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+/* Checked (Dark mode ON) */
+.theme-switch input:checked + label {
+  background: #58a6ff;
+}
+
+.theme-switch input:checked + label::after {
+  transform: translateX(24px);
+}
+
+/* Dark mode container awareness */
+body.dark .theme-switch label {
+  background: #30363d;
+}
+
+/* ===================== HERO HEADER LAYOUT ===================== */
+
+.hero-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* ===================== HERO HEADER ===================== */
+
+.hero-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* 🔥 THIS IS THE FIX */
+  max-width: 100%;
+  width: 100%;
+}
+
+
+/* ===================== THEME SWITCH (ICON BASED) ===================== */
+.theme-switch input {
+  display: none;
+}
+
+.theme-switch label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 64px;
+  height: 32px;
+  background: #f1f3f5;      /* soft neutral */
+  border-radius: 999px;
+  cursor: pointer;
+  padding: 4px;
+  border: 1px solid #d0d7de;
+}
+
+.theme-switch .icon {
+  width: 50%;
+  text-align: center;
+  font-size: 0.85rem;
+  z-index: 1;          /* icons stay visible */
+  opacity: 0.6;
+}
+
+.theme-switch .slider {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: #ffffff;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+  z-index: 2;          /* slider above bg, below icons visually */
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Dark mode position */
+.theme-switch input:checked + label .slider {
+  transform: translateX(30px);
+}
+
+/* ===================== DARK MODE COLORS ===================== */
+
+body.dark .theme-switch .slider {
+  background: #0d1117;
+}
+
+body.dark .theme-switch label {
+  background: #30363d;
+  border-color: #30363d;
+}
+
+.hero {
+  position: relative;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 30px;
+  margin-bottom: 50px;
+}
+
+.theme-switch input:not(:checked) + label .sun {
+  opacity: 1;
+}
+
+.theme-switch input:checked + label .moon {
+  opacity: 1;
+}
+
+/* ===================== THEME SWITCH – LIGHT BLUE FIX ===================== */
+
+.theme-switch label {
+  background: #e8f2ff;              /* light blue background */
+  border: 1px solid #c7ddff;
+}
+
+.theme-switch .slider {
+  background: #ffffff;              /* white knob */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+}
+
+/* Icons */
+.theme-switch .icon {
+  color: #0366d6;                   /* GitHub blue */
+  opacity: 0.85;
+}
+
+/* Active icon emphasis */
+.theme-switch input:not(:checked) + label .sun {
+  opacity: 1;
+}
+
+.theme-switch input:checked + label .moon {
+  opacity: 1;
+}
+
+/* ===================== DARK MODE OVERRIDE ===================== */
+
+body.dark .theme-switch label {
+  background: #1f6feb;              /* rich blue in dark mode */
+  border-color: #1f6feb;
+}
+
+body.dark .theme-switch .slider {
+  background: #0d1117;
+}
+
+body.dark .theme-switch .icon {
+  color: #e6edf3;
+}
+
+/* ===================== FINAL LIGHT MODE TOGGLE FIX ===================== */
+
+/* Force LIGHT MODE toggle background */
+body:not(.dark) .theme-switch label {
+  /* background-color: #e3f0ff !important;   /* clearly light blue */
+  /* border-color: #b6d4ff; */ 
+  background-color: #1f6feb;  /* clearly light blue */
+  border-color: #1f6feb; 
+}
+
+/* Slider knob */
+body:not(.dark) .theme-switch .slider {
+  background-color: #ffffff;
+}
+
+/* Icons */
+body:not(.dark) .theme-switch .icon {
+  color: #0366d6;
+  opacity: 0.9;
+}

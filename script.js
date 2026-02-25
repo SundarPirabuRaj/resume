@@ -1,7 +1,5 @@
-// Accordion (Experience, Projects, etc.)
-const accordionHeaders = document.querySelectorAll(".accordion-header");
-
-accordionHeaders.forEach(header => {
+/* ===================== ACCORDION ===================== */
+document.querySelectorAll(".accordion-header").forEach(header => {
   header.addEventListener("click", () => {
     const content = header.nextElementSibling;
     const isOpen = content.style.display === "block";
@@ -14,17 +12,34 @@ accordionHeaders.forEach(header => {
   });
 });
 
-// Experience card responsibility toggle
-const toggleButtons = document.querySelectorAll(".toggle-btn");
-
-toggleButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    const details = button.nextElementSibling;
+/* ===================== EXPERIENCE TOGGLE ===================== */
+document.querySelectorAll(".toggle-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const details = btn.nextElementSibling;
     const isOpen = details.style.display === "block";
 
     details.style.display = isOpen ? "none" : "block";
-    button.textContent = isOpen
+    btn.textContent = isOpen
       ? "View Responsibilities ▾"
       : "Hide Responsibilities ▴";
   });
+});
+
+/* ===================== DARK MODE TOGGLE ===================== */
+const themeToggle = document.getElementById("theme-toggle");
+
+// Load saved preference
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark");
+  themeToggle.checked = true;
+}
+
+// Toggle on change
+themeToggle.addEventListener("change", () => {
+  document.body.classList.toggle("dark");
+
+  localStorage.setItem(
+    "theme",
+    document.body.classList.contains("dark") ? "dark" : "light"
+  );
 });
