@@ -55,10 +55,18 @@ body {
 }
 
 .primary {
-  border: 1px solid #0366d6;
-  padding: 8px 14px;
-  border-radius: 6px;
+  background: #0366d6;
+  color: #ffffff !important;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  display: inline-flex;
+  align-items: center;
 }
+
 
 /* ===================== ACCORDION ===================== */
 .accordion-item {
@@ -683,12 +691,15 @@ body.dark .project-link:hover {
   color: #0d1117;
 }
 
-
 .quote-footer {
-    margin-top: 40px;
+  margin-top: 40px;
   padding-top: 24px;
   border-top: 1px solid #eaeaea;
-  text-align: center;
+
+  text-align: center;     /* already there */
+  display: flex;          /* 🔥 force centering */
+  flex-direction: column; 
+  align-items: center;    /* 🔥 horizontal center */
 }
 
 .kural {
@@ -708,6 +719,32 @@ body.dark .project-link:hover {
   margin-top: 6px;
   font-size: 0.8rem;
   opacity: 0.6;
+}
+
+body.dark .quote-footer {
+  border-top: 1px solid #30363d;
+}
+
+
+.hero-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;        /* 🚀 prevent wrapping */
+}
+
+.hero-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;           /* 🚀 prevent collapsing */
+}
+
+.kural,
+.kural-meaning,
+.kural-author {
+  text-align: center;
+  max-width: 800px;   /* prevents weird stretching */
 }
 
 body.dark .quote-footer {
